@@ -3,30 +3,339 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        <!--[if lt IE 9]>
-            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <section id="map-wrapper">
+    <div id='map'></div>
+    <div class="map-mask"></div>
+    <header>
+      <div class="faces">
+        <div class="faces-inner">
+          <ul class="clearfix">
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/1.jpg" alt="Face 1"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/2.jpg" alt="Face 2"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/3.jpg" alt="Face 3"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/4.jpg" alt="Face 4"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/5.jpg" alt="Face 5"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/6.jpg" alt="Face 6"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/7.jpg" alt="Face 7"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/8.jpg" alt="Face 8"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/9.jpg" alt="Face 9"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/10.jpg" alt="Face 10"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/11.jpg" alt="Face 11"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/12.jpg" alt="Face 12"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/13.jpg" alt="Face 13"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/14.jpg" alt="Face 14"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/15.jpg" alt="Face 15"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/16.jpg" alt="Face 16"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/17.jpg" alt="Face 17"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/18.jpg" alt="Face 18"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/19.jpg" alt="Face 19"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/20.jpg" alt="Face 20"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/21.jpg" alt="Face 21"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/22.jpg" alt="Face 22"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/23.jpg" alt="Face 23"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/24.jpg" alt="Face 24"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/25.jpg" alt="Face 25"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/26.jpg" alt="Face 26"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/27.jpg" alt="Face 27"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/28.jpg" alt="Face 28"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/29.jpg" alt="Face 29"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/30.jpg" alt="Face 30"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/31.jpg" alt="Face 31"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/32.jpg" alt="Face 32"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/33.jpg" alt="Face 33"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/34.jpg" alt="Face 34"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/35.jpg" alt="Face 35"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/36.jpg" alt="Face 36"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/37.jpg" alt="Face 37"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/38.jpg" alt="Face 38"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/39.jpg" alt="Face 39"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/40.jpg" alt="Face 40"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/41.jpg" alt="Face 41"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/42.jpg" alt="Face 42"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/43.jpg" alt="Face 43"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/44.jpg" alt="Face 44"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/45.jpg" alt="Face 45"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/46.jpg" alt="Face 46"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/47.jpg" alt="Face 47"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/48.jpg" alt="Face 48"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/49.jpg" alt="Face 49"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/50.jpg" alt="Face 50"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/1.jpg" alt="Face 1"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/2.jpg" alt="Face 2"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/3.jpg" alt="Face 3"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/4.jpg" alt="Face 4"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/5.jpg" alt="Face 5"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/6.jpg" alt="Face 6"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/7.jpg" alt="Face 7"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/8.jpg" alt="Face 8"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/9.jpg" alt="Face 9"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/10.jpg" alt="Face 10"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/11.jpg" alt="Face 11"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/12.jpg" alt="Face 12"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/13.jpg" alt="Face 13"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/14.jpg" alt="Face 14"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/15.jpg" alt="Face 15"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/16.jpg" alt="Face 16"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/17.jpg" alt="Face 17"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/18.jpg" alt="Face 18"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/19.jpg" alt="Face 19"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/20.jpg" alt="Face 20"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/21.jpg" alt="Face 21"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/22.jpg" alt="Face 22"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/23.jpg" alt="Face 23"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/24.jpg" alt="Face 24"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/25.jpg" alt="Face 25"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/26.jpg" alt="Face 26"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/27.jpg" alt="Face 27"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/28.jpg" alt="Face 28"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/29.jpg" alt="Face 29"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/30.jpg" alt="Face 30"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/31.jpg" alt="Face 31"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/32.jpg" alt="Face 32"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/33.jpg" alt="Face 33"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/34.jpg" alt="Face 34"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/35.jpg" alt="Face 35"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/36.jpg" alt="Face 36"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/37.jpg" alt="Face 37"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/38.jpg" alt="Face 38"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/39.jpg" alt="Face 39"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/40.jpg" alt="Face 40"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/41.jpg" alt="Face 41"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/42.jpg" alt="Face 42"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/43.jpg" alt="Face 43"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/44.jpg" alt="Face 44"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/45.jpg" alt="Face 45"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/46.jpg" alt="Face 46"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/47.jpg" alt="Face 47"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/48.jpg" alt="Face 48"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/49.jpg" alt="Face 49"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/50.jpg" alt="Face 50"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/1.jpg" alt="Face 1"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/2.jpg" alt="Face 2"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/3.jpg" alt="Face 3"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/4.jpg" alt="Face 4"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/5.jpg" alt="Face 5"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/6.jpg" alt="Face 6"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/7.jpg" alt="Face 7"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/8.jpg" alt="Face 8"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/9.jpg" alt="Face 9"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/10.jpg" alt="Face 10"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/11.jpg" alt="Face 11"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/12.jpg" alt="Face 12"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/13.jpg" alt="Face 13"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/14.jpg" alt="Face 14"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/15.jpg" alt="Face 15"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/16.jpg" alt="Face 16"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/17.jpg" alt="Face 17"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/18.jpg" alt="Face 18"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/19.jpg" alt="Face 19"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/20.jpg" alt="Face 20"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/21.jpg" alt="Face 21"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/22.jpg" alt="Face 22"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/23.jpg" alt="Face 23"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/24.jpg" alt="Face 24"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/25.jpg" alt="Face 25"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/26.jpg" alt="Face 26"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/27.jpg" alt="Face 27"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/28.jpg" alt="Face 28"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/29.jpg" alt="Face 29"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/30.jpg" alt="Face 30"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/31.jpg" alt="Face 31"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/32.jpg" alt="Face 32"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/33.jpg" alt="Face 33"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/34.jpg" alt="Face 34"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/35.jpg" alt="Face 35"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/36.jpg" alt="Face 36"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/37.jpg" alt="Face 37"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/38.jpg" alt="Face 38"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/39.jpg" alt="Face 39"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/40.jpg" alt="Face 40"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/41.jpg" alt="Face 41"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/42.jpg" alt="Face 42"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/43.jpg" alt="Face 43"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/44.jpg" alt="Face 44"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/45.jpg" alt="Face 45"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/46.jpg" alt="Face 46"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/47.jpg" alt="Face 47"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/48.jpg" alt="Face 48"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/49.jpg" alt="Face 49"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/women/50.jpg" alt="Face 50"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/1.jpg" alt="Face 1"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/2.jpg" alt="Face 2"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/3.jpg" alt="Face 3"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/4.jpg" alt="Face 4"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/5.jpg" alt="Face 5"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/6.jpg" alt="Face 6"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/7.jpg" alt="Face 7"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/8.jpg" alt="Face 8"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/9.jpg" alt="Face 9"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/10.jpg" alt="Face 10"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/11.jpg" alt="Face 11"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/12.jpg" alt="Face 12"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/13.jpg" alt="Face 13"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/14.jpg" alt="Face 14"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/15.jpg" alt="Face 15"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/16.jpg" alt="Face 16"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/17.jpg" alt="Face 17"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/18.jpg" alt="Face 18"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/19.jpg" alt="Face 19"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/20.jpg" alt="Face 20"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/21.jpg" alt="Face 21"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/22.jpg" alt="Face 22"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/23.jpg" alt="Face 23"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/24.jpg" alt="Face 24"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/25.jpg" alt="Face 25"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/26.jpg" alt="Face 26"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/27.jpg" alt="Face 27"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/28.jpg" alt="Face 28"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/29.jpg" alt="Face 29"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/30.jpg" alt="Face 30"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/31.jpg" alt="Face 31"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/32.jpg" alt="Face 32"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/33.jpg" alt="Face 33"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/34.jpg" alt="Face 34"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/35.jpg" alt="Face 35"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/36.jpg" alt="Face 36"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/37.jpg" alt="Face 37"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/38.jpg" alt="Face 38"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/39.jpg" alt="Face 39"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/40.jpg" alt="Face 40"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/41.jpg" alt="Face 41"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/42.jpg" alt="Face 42"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/43.jpg" alt="Face 43"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/44.jpg" alt="Face 44"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/45.jpg" alt="Face 45"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/46.jpg" alt="Face 46"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/47.jpg" alt="Face 47"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/48.jpg" alt="Face 48"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/49.jpg" alt="Face 49"></li>
+            <li><img src="http://api.randomuser.me/0.3.2/portraits/men/50.jpg" alt="Face 50"></li>
+          </ul>
+          <div class="faces-mask"></div>
+        </div>
+      </div>
+      <div class="centered-container">
+        <div class="page-title">
+          <h1>Liberty lives here</h1>
+        </div>
+        <h2 class="signers-count">Join <strong>101,298</strong> other signers</h2>
+      </div>
+    </header>
+    <div class="signup-section">
+      <div class="centered-container">
+        <div class="box animated fadeInUp">
+          <div class="sign-with-facebook">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+              <span>Sign With Facebook</span>
+            </a>
+            <p class="disclosure">We will never post on your profile without your permitions</p>
+          </div>
+          <p>- or -</p>
+          <div class="sign-here">
+            <a href="">Sign Here</a>
+          </div>
+          <form class="signup-form">
+            <input type="text"  class="form-control" placeholder="Fist Name">
+            <input type="text"  class="form-control" placeholder="Last Name">
+            <input type="email" class="form-control"  placeholder="Email">
+            <input type="text"  class="form-control" placeholder="Address 1">
+            <input type="text"  class="form-control" placeholder="Address 2">
+            <input type="text"  class="form-control" placeholder="City">
+            <select name="state" class="form-control">
+              <option title="State" value="">State</option>
+              <option value="AL" title="AL">Alabama</option>
+              <option value="AK" title="AK">Alaska</option>
+              <option value="AS" title="AS">American Samoa</option>
+              <option value="AZ" title="AZ">Arizona</option>
+              <option value="AR" title="AR">Arkansas</option>
+              <option value="CA" title="CA">California</option>
+              <option value="CO" title="CO">Colorado</option>
+              <option value="CT" title="CT">Connecticut</option>
+              <option value="DE" title="DE">Delaware</option>
+              <option value="DC" title="DC">District Of Columbia</option>
+              <option value="FM" title="FM">Federated States Of Micronesia</option>
+              <option value="FL" title="FL">Florida</option>
+              <option value="GA" title="GA">Georgia</option>
+              <option value="GU" title="GU">Guam</option>
+              <option value="HI" title="HI">Hawaii</option>
+              <option value="ID" title="ID">Idaho</option>
+              <option value="IL" title="IL">Illinois</option>
+              <option value="IN" title="IN">Indiana</option>
+              <option value="IA" title="IA">Iowa</option>
+              <option value="KS" title="KS">Kansas</option>
+              <option value="KY" title="KY">Kentucky</option>
+              <option value="LA" title="LA">Louisiana</option>
+              <option value="ME" title="ME">Maine</option>
+              <option value="MH" title="MH">Marshall Islands</option>
+              <option value="MD" title="MD">Maryland</option>
+              <option value="MA" title="MA">Massachusetts</option>
+              <option value="MI" title="MI">Michigan</option>
+              <option value="MN" title="MN">Minnesota</option>
+              <option value="MS" title="MS">Mississippi</option>
+              <option value="MO" title="MO">Missouri</option>
+              <option value="MT" title="MT">Montana</option>
+              <option value="NE" title="NE">Nebraska</option>
+              <option value="NV" title="NV">Nevada</option>
+              <option value="NH" title="NH">New Hampshire</option>
+              <option value="NJ" title="NJ">New Jersey</option>
+              <option value="NM" title="NM">New Mexico</option>
+              <option value="NY" title="NY">New York</option>
+              <option value="NC" title="NC">North Carolina</option>
+              <option value="ND" title="ND">North Dakota</option>
+              <option value="MP" title="MP">Northern Mariana Islands</option>
+              <option value="OH" title="OH">Ohio</option>
+              <option value="OK" title="OK">Oklahoma</option>
+              <option value="OR" title="OR">Oregon</option>
+              <option value="PW" title="PW">Palau</option>
+              <option value="PA" title="PA">Pennsylvania</option>
+              <option value="PR" title="PR">Puerto Rico</option>
+              <option value="RI" title="RI">Rhode Island</option>
+              <option value="SC" title="SC">South Carolina</option>
+              <option value="SD" title="SD">South Dakota</option>
+              <option value="TN" title="TN">Tennessee</option>
+              <option value="TX" title="TX">Texas</option>
+              <option value="UT" title="UT">Utah</option>
+              <option value="VT" title="VT">Vermont</option>
+              <option value="VI" title="VI">Virgin Islands</option>
+              <option value="VA" title="VA">Virginia</option>
+              <option value="WA" title="WA">Washington</option>
+              <option value="WV" title="WV">West Virginia</option>
+              <option value="WI" title="WI">Wisconsin</option>
+              <option value="WY" title="WY">Wyoming</option>
+            </select>
+            <input type="text" class="form-control" placeholder="State">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <script src="js/main.js"></script>
-    </body>
+<script src="js/vendor/jquery-1.11.0.min.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
